@@ -22,7 +22,7 @@ public class ServerWorldMixin {
         }
 
         //TODO: Remove hard-coding and add unwanted dimensions to Blacklist file
-        if (entity.getWorld().getRegistryKey() == World.OVERWORLD) {
+        if (entity.getEntityWorld().getRegistryKey() == World.OVERWORLD) {
             if (MobsBeGone.isEntityBlacklisted(entity.getType())) {
                 entity.discard();
                 // MobsBeGone.LOGGER.info("Mixin discarded " + entity.getType());

@@ -43,7 +43,7 @@ public class MobsBeGone implements ModInitializer {
 		if (entity instanceof LivingEntity) {
 			if (isEntityBlacklisted(entity.getType())) {
                 //TODO: Remove hard-coding and add unwanted dimensions to Blacklist file
-                if (entity.getWorld().getRegistryKey() == World.OVERWORLD) {
+                if (entity.getEntityWorld().getRegistryKey() == World.OVERWORLD) {
                     ENTITY_BUFFER.add(entity);
                 }
 			}
